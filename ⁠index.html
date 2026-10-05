@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finance Dashboard</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background-color: #f4f7fe; color: #2b3674; padding: 20px; }
+    .container { max-width: 500px; margin: 0 auto; }
+    .header { margin-bottom: 20px; }
+    .header h1 { font-size: 22px; color: #1b2559; }
+    .header p { font-size: 14px; color: #a3edd9; color: #707ebe; }
+    
+    .card { background: white; border-radius: 16px; padding: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.03); margin-bottom: 15px; }
+    .balance-card { background: linear-gradient(135deg, #4318ff 0%, #b224ef 100%); color: white; }
+    .balance-title { font-size: 14px; opacity: 0.8; }
+    .balance-amount { font-size: 32px; font-weight: bold; margin: 10px 0 15px; }
+    
+    .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px; }
+    .stat-card { background: white; border-radius: 16px; padding: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.03); }
+    .stat-label { font-size: 12px; color: #a3aed0; }
+    .stat-value { font-size: 18px; font-weight: bold; margin-top: 5px; }
+    .income { color: #05cd99; }
+    .expenses { color: #ee5d50; }
+    
+    .recent-title { font-size: 16px; font-weight: bold; margin-bottom: 12px; }
+    .transaction { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1fr solid #f4f7fe; }
+    .transaction:last-child { border-bottom: none; }
+    .trans-info h4 { font-size: 14px; }
+    .trans-info p { font-size: 12px; color: #a3aed0; }
+    .trans-amount { font-weight: bold; font-size: 14px; }
+    
+    .btn { width: 100%; padding: 12px; border: none; background: #4318ff; color: white; font-weight: bold; border-radius: 12px; cursor: pointer; margin-top: 10px; }
+    .btn:active { opacity: 0.8; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Financial Overview</h1>
+      <p>Welcome back, Client!</p>
+    </div>
+
+    <div class="card balance-card">
+      <div class="balance-title">Total Balance</div>
+      <div class="balance-amount">$12,450.80</div>
+      <p style="font-size: 12px; opacity: 0.9;">+15% from last month</p>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-label">Income</div>
+        <div class="stat-value income">+$4,200.00</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Expenses</div>
+        <div class="stat-value expenses">-$1,850.50</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="recent-title">Recent Transactions</div>
+      <div class="transaction">
+        <div class="trans-info">
+          <h4>Web Development Project</h4>
+          <p>Payment Received</p>
+        </div>
+        <div class="trans-amount income">+$1,200.00</div>
+      </div>
+      <div class="transaction">
+        <div class="trans-info">
+          <h4>Software License</h4>
+          <p>Subscription</p>
+        </div>
+        <div class="trans-amount expenses">-$49.00</div>
+      </div>
+      <div class="transaction">
+        <div class="trans-info">
+          <h4>Hosting & Domain</h4>
+          <p>Cloud Service</p>
+        </div>
+        <div class="trans-amount expenses">-$120.00</div>
+      </div>
+      <button class="btn" onclick="alert('Transaction statement downloaded!')">Download Statement</button>
+    </div>
+  </div>
+</body>
+</html>
